@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PokéZone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">PokéZone</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="website.html">PokéHome</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">PokéDex</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="contact.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Trainer Hub
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">👤 Trainer Profile</a></li>
+                            <li><a class="dropdown-item" href="#"> <img class="img-fluid"
+                                        src="https://th.bing.com/th/id/OIP.9pAEYFHTnT9JOktev2BqMwHaHu?rs=1&pid=ImgDetMain"
+                                        width="20"> My Pokémon</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/da41e761-f773-46de-ae68-89306eaa9127/dgctk18-03eea05f-50b4-4318-950c-904b661378a5.png/v1/fill/w_1280,h_860,q_80,strp/pokemon_world_map_as_of_2023__kitakami__by_mossen1998_dgctk18-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODYwIiwicGF0aCI6IlwvZlwvZGE0MWU3NjEtZjc3My00NmRlLWFlNjgtODkzMDZlYWE5MTI3XC9kZ2N0azE4LTAzZWVhMDVmLTUwYjQtNDMxOC05NTBjLTkwNGI2NjEzNzhhNS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.xcRQdsSHbKtzU4DaTD7pKHsaOWDTOwCFibPJi0qGPKk">🗺️
+                                    Trainer Journey</a></li>
+                            <li><a class="dropdown-item"
+                                    href="https://th.bing.com/th/id/R.b2e78478616ed00a0157b298d0875e63?rik=9h91Nv4GAv9GOA&riu=http%3a%2f%2ffc07.deviantart.net%2ffs70%2fi%2f2013%2f347%2fa%2fb%2fall_pokemon_badges_by_seancantrell-d6lwqse.png&ehk=NBP%2fIl8scnF%2bQ8QIEnFF1vLHRZ5CIO74l026Ek4mdFU%3d&risl=&pid=ImgRaw&r=0">🛡️
+                                    Badges Earned</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">⚙️ Settings</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Mystery Zone</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search PokéWorld" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#LoginModal">Login</button>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#SignUpModal">SignUp</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Login Modal -->
+    <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="LoginModalLabel">Login to PokéZone</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login ➡</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SignUp Modal -->
+    <div class="modal fade" id="SignUpModal" tabindex="-1" aria-labelledby="SignUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="SignUpModalLabel">Get a PokéAccount</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+
+                    <form class="row g-3">
+                        <div class="col-md-4">
+                            <label for="validationServer01" class="form-label">First name</label>
+                            <input type="text" class="form-control is-valid" id="validationServer01" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationServer01" class="form-label">Last name</label>
+                            <input type="text" class="form-control is-valid" id="validationServer01" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationServerUsername" class="form-label">Username</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                                <input type="text" class="form-control is-invalid" id="validationServerUsername"
+                                    aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3"
+                                    aria-describedby="invalidCheck3Feedback" required>
+                                <label class="form-check-label" for="invalidCheck3">
+                                    Agree to terms and conditions
+                                </label>
+                                <div id="invalidCheck3Feedback" class="invalid-feedback">
+                                    You must agree before submitting.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Submit form</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner carousel-fade">
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1542887486-c0aeb6d2fc46?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    width="1000" height="400" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Welcome to PokéZone</h2>
+                    <p>Every journey begins with a Poké Ball. Start your adventure today!🗺</p>
+                    <button class="btn btn-danger">Start Your Journey</button>
+                    <button class="btn btn-primary">Explore PokéDex</button>
+                    <button class="btn btn-success">Join Trainer Hub</button>
+                </div>
+            </div>
+            <div class="carousel-item carousel-fade">
+                <img src="https://images.unsplash.com/photo-1638964758061-117853a20865?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    width="1000" height="400" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Pikachu⚡, I Choose You!</h2>
+                    <p>Explore the world of your favorite Pokémon and uncover their powers.</p>
+                    <button class="btn btn-danger">Feel the Spark</button>
+                    <button class="btn btn-primary">Meet Electric Pokémon</button>
+                    <button class="btn btn-success">Join Pikachu's Squad</button>
+                </div>
+            </div>
+            <div class="carousel-item carousel-fade">
+                <img src="https://images.unsplash.com/photo-1637164011965-635d3e762a38?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    width="1000" height="400" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Unleash the Fire Within 🔥</h2>
+                    <p>Discover powerful Pokémon like Charizard and build your ultimate team.</p>
+                    <button class="btn btn-danger">Train Fire Types</button>
+                    <button class="btn btn-primary">Build Your Team</button>
+                    <button class="btn btn-success">Enter the Battle Arena</button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container my-4">
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative h-100">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">PokéFlash</strong>
+                        <h3 class="mb-0">Snorlax: The Legendary Sleeper 💤</h3>
+                        <div class="mb-1 text-body-secondary">Apr 20</div>
+                        <p class="card-text mb-auto">Snorlax, the sleeping giant, has become an iconic powerhouse in
+                            battles. With its high HP and strong moves, Snorlax is unstoppable when awake!</p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            View PokéCard
+                            <svg class="bi" aria-hidden="true">
+                                <use xlink:href="#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="https://www.pikawiz.com/images/chillingreign/224.png" class="img-thumbnail"
+                            width="200" height="250" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative h-100">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-warning">Trainer Tips</strong>
+                        <h3 class="mb-0">Eevee: A World of Evolutions 🌟</h3>
+                        <div class="mb-1 text-body-secondary">Apr 19</div>
+                        <p class="mb-auto">Eevee has many evolution options—each offering unique abilities. Discover the
+                            right evolution for your battle strategy!</p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Learn Evolutions
+                            <svg class="bi" aria-hidden="true">
+                                <use xlink:href="#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="img-fluid"
+                            src="https://i2.wp.com/pokemongohub.net/wp-content/uploads/2020/11/D64H_k7W4AE0H-q.jpg"
+                            width="200" height="250" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative h-100">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-danger">PokéMart Picks</strong>
+                        <h3 class="mb-0">The Master Ball: Ultimate Catch! 🎯</h3>
+                        <div class="mb-1 text-body-secondary">Apr 18</div>
+                        <p class="card-text mb-auto">The Master Ball is the most powerful PokéBall you can get, ensuring
+                            you catch any Pokémon with ease. Learn how to unlock this rare item!</p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Buy Now (Coming Soon)
+                            <svg class="bi" aria-hidden="true">
+                                <use xlink:href="#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="img-fluid"
+                            src="https://th.bing.com/th/id/OIP.H2k85vpi2DUffnfNRp15_gAAAA?rs=1&pid=ImgDetMain"
+                            width="200" height="250" alt="Master Ball">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative h-100">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Legendary Lore</strong>
+                        <h3 class="mb-0">Mewtwo: The Clone with Power 🧬</h3>
+                        <div class="mb-1 text-body-secondary">Apr 17</div>
+                        <p class="card-text mb-auto">Created from the DNA of Mew, Mewtwo is one of the most powerful
+                            Psychic-type Pokémon ever. Dive into the mystery of its origins!</p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Discover More
+                            <svg class="bi" aria-hidden="true">
+                                <use xlink:href="#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="img-fluid"
+                            src="https://th.bing.com/th/id/OIP.ngvx8pj_xQTDwQEdFOpBgQHaHQ?rs=1&pid=ImgDetMain"
+                            width="200" height="250" alt="Mewtwo">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2025–2033 PokéZone, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
